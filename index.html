@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ANURAG REDDY</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+
+    <!-- Meta Pixel Code -->
+    <script>
+        !function(f,b,e,v,n,t,s){
+            if(f.fbq)return;
+            n=f.fbq=function(){n.callMethod?
+            n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+            if(!f._fbq)f._fbq=n;
+            n.push=n;n.loaded=!0;n.version='2.0';
+            n.queue=[];
+            t=b.createElement(e);t.async=!0;
+            t.src=v;s=b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t,s)
+        }(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
+
+        fbq('init','935834612128332');
+        fbq('track','PageView');
+    </script>
+
+    <noscript>
+        <img height="1" width="1" style="display:none"
+        src="https://www.facebook.com/tr?id=935834612128332&ev=PageView&noscript=1"/>
+    </noscript>
+
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+
+<body class="min-h-screen bg-gradient-to-b from-blue-50 to-blue-100 flex items-center justify-center p-4">
+
+    <div class="bg-white rounded-3xl shadow-xl p-8 w-full max-w-sm text-center">
+
+        <div class="mx-auto w-24 h-24 mb-4">
+            <img src="https://github.com/mrxsetup/anuragreddy-south/blob/main/anuragreddy.jpg?raw=true"
+                 class="w-full h-full rounded-full object-cover border-4 border-white shadow-md">
+        </div>
+
+        <h1 class="text-2xl font-black text-gray-900 mb-1 uppercase">
+            ANURAG REDDY
+        </h1>
+
+        <p class="text-gray-500 text-xs font-bold mb-6">
+            1,000,000+ Subscribers
+        </p>
+
+        <p class="text-gray-600 text-sm mb-6 leading-relaxed">
+            Join now for exclusive insights and daily tips.
+        </p>
+
+        <p class="text-blue-500 text-xs font-semibold mb-3 animate-pulse">
+            Tap button to view in Telegram
+        </p>
+
+        <a href="https://t.me/+478AfJUJOS8zYmI1" id="joinBtn"
+           class="block w-full bg-[#229ED9] hover:bg-[#1A8LB5] text-white font-bold py-4 rounded-xl shadow-lg shadow-blue-500/30 transition-transform active:scale-95 text-center">
+
+            <span id="btnText">JOIN CHANNEL</span>
+            <span id="btnLoad" class="hidden">Loading...</span>
+        </a>
+
+        <div class="mt-6 text-[10px] text-gray-400">
+            If you have Telegram, you can view and join this channel right away.
+        </div>
+
+        <div class="mt-2 text-[10px] text-gray-300">
+            Privacy • Terms
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('joinBtn').addEventListener('click', function(e) {
+            e.preventDefault();
+
+            document.getElementById('btnText').style.display = 'none';
+            document.getElementById('btnLoad').classList.remove('hidden');
+
+            if (typeof fbq === 'function') {
+                fbq('track', 'Lead');
+            }
+
+            setTimeout(function(){
+                window.location.replace("https://t.me/+478AfJUJOS8zYmI1");
+            }, 250);
+        });
+    </script>
+
+</body>
+</html>
